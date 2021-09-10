@@ -1,51 +1,108 @@
+html  { 
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(225, 100%, 94%);
+}
 body { 
-font-family: 'Red Hat Display', sans-serif;
-
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
 .basterdBox { 
-    display: grid;
-    grid-gap: 40px;
-    margin: 100px 20%;
-    grid-template-rows:  2fr repeat(3, auto);
-    text-align: center;
-    border: 10px solid transparent;
-    border-radius:20px;
-}
-
-.basterdBox > div { 
-    /* border: 3px solid red; */
-}
-
-/* .imgHere {
-  display: grid;
-} */
-
-.imgHere img { 
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    width: 100%;
-    height: 100%;
-}
-
-p { 
-    color: hsl(224, 23%, 55%);;
+    background-color: white;
+    width: 100vw;
+    max-width: 375px;
+    grid-template-rows: 2fr repeat(auto-fit, minmax (350px, 1fr));
+    border-radius: 17px;
 }
 
 h2 { 
+    font-weight: bolder;
     color: hsl(223, 47%, 23%);
 }
 
+.imgHere img { 
+    width: 100%;
+    background-size: cover;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+}
+
+.description { 
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Annual Plan*/
 .payment { 
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-gap: 30px;
-    align-items: center;
-    line-height: 10px;
+    margin: 0px 30px;
+    padding: 25px;
     background-color: hsl(225, 100%, 98%);
-    margin: 0 30px;
-    padding: 10px;
-    border-radius: 15px;
+    border-radius: 17px;
+    align-items: center;
+    color: hsl(224, 23%, 55%);
+}
+
+.payment .annualPlan { 
+   display: grid;
+   line-height: 0px;
+   align-items: start;
+   padding-left: 20px;
+}
+
+.annualPlan h2 { 
+    font-size: 1.05rem;
+}
+
+.payment a:hover { 
+    color: hsl(245, 75%, 52%);
+    font-weight: bolder;
+}
+
+
+/* Buttons*/ 
+.buttons { 
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 0px 10px;
+    padding: 20px;
+    grid-gap: 25px;
+}
+
+.proceed { 
+    background-color:  hsl(245, 75%, 52%);
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    box-shadow:0 5px 25px 0 rgba(0,0,0, .25);
+}
+
+.proceed:hover { 
+    font-weight: bolder;
+    text-shadow: 3px 5px 20px;
+}
+
+.cancel { 
+    border: none;
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    color: hsl(224, 23%, 55%);
+    margin-bottom: 10px;
+}
+
+.cancel:hover { 
+    font-weight: bold;
+    text-shadow: 2px 5px 20px;
 }
 
 
